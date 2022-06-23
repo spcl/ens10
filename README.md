@@ -1,3 +1,5 @@
+![Logo](https://raw.githubusercontent.com/spcl/ens10/main/figures/post-processing_pipeline-1.png?raw=true)
+
 # ENS-10: A Dataset for Ensmeble Post-Processing.
 
 This repository contains the instructions and examples for using the ENS-10 dataset. 
@@ -42,7 +44,7 @@ For demo notebooks, see [here](https://github.com/spcl/climetlab-maelstrom-ens10
 
 
 ### Direct Download
-The dataset is hosted on the [ECMWF servers](https://storage.ecmwf.europeanweather.cloud/MAELSTROM_AP4/). All files can be downloaded alternatively using [this](http://spclstorage.inf.ethz.ch/projects/deep-weather/ENS10/) link. All files are has `2018` as a prefix.
+The dataset is hosted on the [ECMWF servers](https://storage.ecmwf.europeanweather.cloud/MAELSTROM_AP4/). All files can be downloaded alternatively using [this](http://spclstorage.inf.ethz.ch/projects/deep-weather/ENS10/) link. All files have `2018` prefix.
  
  
 ##  License
