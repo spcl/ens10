@@ -1,11 +1,9 @@
-# Implementation of the  MLP baseline
-# The input is a point with 2*n +2 channels where n is the number of variables in the pressure levels + lat/long values
-# The output of the network is 2
 
 import torch
 from torch import nn
 import torch.nn.functional as F
 import numpy as np
+
 
 class LocationEmbedding(nn.Module):
     def __init__(self, infeature, outfeature, scale, offset):

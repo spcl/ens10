@@ -2,7 +2,7 @@
 
 # ENS-10: A Dataset for Ensmeble Post-Processing.
 
-This repository contains the instructions and examples for using the ENS-10 dataset. 
+This repository contains the instructions and examples for using the [ENS-10 dataset](https://arxiv.org/abs/2206.14786). 
 
 
 > **Abstract:** Post-processing ensemble prediction systems can improve weather forecasting, especially for extreme event prediction.
@@ -12,6 +12,15 @@ To represent the three-dimensional state of the atmosphere, ENS-10 provides the 
 The dataset targets the prediction correction task at 48-hour lead time, which is essentially improving the forecast quality by removing the biases of the ensemble members. To this end, ENS-10 provides the weather variables for forecast lead times T=0, 24, and 48 hours (two data points per week). We provide a set of baselines for this task on ENS-10 and compare their performance in correcting the prediction of different weather variables. We also assess our baselines for predicting extreme events using our dataset. The ENS-10 dataset is available under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence.
 
 For any questions, please create an issue. 
+
+## Requirements
+
+To install requirements:
+
+```setup
+pip install -r requirements.txt
+```
+
 
 ## Usage
 
@@ -47,6 +56,26 @@ For demo notebooks, see [here](https://github.com/spcl/climetlab-maelstrom-ens10
 The dataset is hosted on the [ECMWF servers](https://storage.ecmwf.europeanweather.cloud/MAELSTROM_AP4/). All files can be downloaded alternatively using [this](http://spclstorage.inf.ethz.ch/projects/deep-weather/ENS10/) link. All files have `2018` prefix.
  
  
+##  Structure
+
+* `baselines` -- this folder contains all scripts for running the baseline models.
+* `baselines/utils` -- this folder contains all scripts for extracting the data, converting from GRIB to Numpy, and metric.
+* `EFI` -- this folder contains all scripts for extracting the extreme forecast index over the dataset.
+
+
+
 ##  License
 
 The ENS-10 dataset is available under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence (see [here](https://github.com/spcl/ens10/blob/main/LICENSE)).
+
+
+##  How to cite
+
+```
+@article{ashkboos2022ens,
+  title={ENS-10: A Dataset For Post-Processing Ensemble Weather Forecast},
+  author={Ashkboos, Saleh and Huang, Langwen and Dryden, Nikoli and Ben-Nun, Tal and Dueben, Peter and Gianinazzi, Lukas and Kummer, Luca and Hoefler, Torsten},
+  journal={arXiv preprint arXiv:2206.14786},
+  year={2022}
+}
+```

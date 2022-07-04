@@ -1,5 +1,3 @@
-# U-Net baseline will operate on an input with 14/22 channels
-# It output is always two channels!
 
 from torch import nn as nn
 import torch
