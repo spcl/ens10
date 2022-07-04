@@ -55,6 +55,17 @@ For demo notebooks, see [here](https://github.com/spcl/climetlab-maelstrom-ens10
 ### Direct Download
 The dataset is hosted on the [ECMWF servers](https://storage.ecmwf.europeanweather.cloud/MAELSTROM_AP4/). All files can be downloaded alternatively using [this](http://spclstorage.inf.ethz.ch/projects/deep-weather/ENS10/) link. All files have `2018` prefix.
  
+
+### Train Baseline Models
+
+To train the baseline model(s) in the paper, run this command:
+
+```train
+python Train.py --model <model_name> --data-path <path_to_data> --target-var <predicted_variable>
+```
+
+
+
  
 ##  Structure
 

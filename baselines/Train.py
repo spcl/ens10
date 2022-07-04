@@ -1,5 +1,5 @@
 import numpy as np
-from utils import args_parser, CrpsGaussianLoss, WeightedCrpsGaussianLoss
+from utils import args_parser, CrpsGaussianLoss, EECRPSGaussianLoss
 from models import *
 from loader import *
 from plot import scatter_plot, hist2d_plot
@@ -56,7 +56,7 @@ def test(epoch, testloader, model, criterion, args, device):
     test_loss_efi = []
 
     ds_efi = xr.load_dataarray(f"{args.data_path}/efi_{args.target_var}.nc").stack(space=["latitude","longitude"])
-    crps_efi = WeightedCrpsGaussianLoss()
+    crps_efi = EECRPSGaussianLoss()
 
     with torch.no_grad():
         for batch_idx, (dates, inputs, targets, scale_mean, scale_std) in tqdm(enumerate(testloader), desc=f'[Test] Epoch {epoch}: ',

@@ -48,15 +48,15 @@ class CrpsGaussianLoss(nn.Module):
             return torch.mean(crps)
         return crps
 
-class WeightedCrpsGaussianLoss(nn.Module):
+class EECRPSGaussianLoss(nn.Module):
     """
-      This is a WCRPS loss function assuming a gaussian distribution with EFI indeces.
+      This is a EECRPS loss function assuming a gaussian distribution with EFI indeces.
       """
 
     def __init__(self,
                  mode = 'mean',
                  eps: Union[int, float] = 1E-15):
-        super(WeightedCrpsGaussianLoss, self).__init__()
+        super(EECRPSGaussianLoss, self).__init__()
 
         assert mode in ['mean', 'raw'], 'CRPS mode should be mean or raw'
 
